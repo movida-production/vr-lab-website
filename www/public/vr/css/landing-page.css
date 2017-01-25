@@ -4,33 +4,22 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-body,
-html {
+/* Génériques */
+body, html {
     width: 100%;
     height: 100%;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+body, h1, h2, h3, h4, h5, h6 {
     font-family: "Soleil","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
-.wireframebg {
-    background: url(../img/wireframe-bg.png) repeat center center;
-    background-position: 0% 12%; 
-}
+.greynav{color:#747474;}
+.bluenav{color:#2badff;}
+.fs5{font-size: 5%}
 
-.topnav {
-    font-size: 14px; 
-}
-
-.lead {
+p.lead {
     font-family: Lato;
     font-size:140%;
     font-weight:300;
@@ -38,6 +27,19 @@ h6 {
     line-height: 120%;    
 }
 
+/* Navigation */
+.topnav {
+    font-size:28px;
+    letter-spacing:5px;
+    font-weight: 300
+}
+
+.rightnav{
+    font-size: 18px;
+    letter-spacing: normal
+}
+
+/* Header */
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
@@ -45,53 +47,31 @@ h6 {
     color: #f8f8f8;
     background: url(../img/intro-bg.jpg) no-repeat center center;
     background-size: cover;
+    min-height:60%;
+    padding-top:12.5%;
+    padding-bottom:10%
 }
 
-.intro-message {
-    position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+.intro-header h1{
+    font-size:600%;
+    letter-spacing:15px;
+    font-weight:300;
 }
 
-.intro-message > h1 {
-    margin: 0;
-    /*text-shadow: 2px 2px 3px rgba(0,0,0,0.6);*/
-    font-size: 5em;
+.intro-header h3 {
+    font-size:250%;
+    letter-spacing:5px;
+    font-weight:300;
 }
 
-.intro-divider {
-    width: 400px;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+.header-links{margin-top: 5%;}
+
+/* Page Content */
+.wireframebg {
+    background: url(../img/wireframe-bg.png) repeat center center;
+    background-position: 0% 12%; 
 }
 
-.intro-message > h3 {
-    /*text-shadow: 2px 2px 3px rgba(0,0,0,0.6);*/
-}
-
-@media(max-width:767px) {
-    .intro-message {
-        padding-bottom: 15%;
-    }
-
-    .intro-message > h1 {
-        font-size: 3em;
-    }
-
-    ul.intro-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.intro-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
-
-    .intro-divider {
-        width: 100%;
-    }
-}
 
 .network-name {
     text-transform: uppercase;
@@ -127,14 +107,14 @@ h6 {
     margin-top:0%;
 }
 
+/* Banner */
 .banner {
-    padding: 100px 0;
+    padding: 40px 0;
     background-color: rgba(255,255,255,0.75);
 }
 
 .banner h2 {
     margin: 0;
-    /*text-shadow: 2px 2px 3px rgba(0,0,0,0.6);*/
     font-size: 3em;
 }
 
@@ -143,21 +123,39 @@ h6 {
 }
 
 .banner-social-buttons {
-    float: right;
     margin-top: 0;
+    text-align: center;
 }
 
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        float: left;
-        margin-top: 15px;
-    }
+.banner-img{
+    padding-right:15%;padding-left:15%;
 }
+
+/* Footer */
+
+footer {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+footer ul.list-inline{
+    text-align:center;
+    font-size:150%;
+    font-weight:300;
+}
+
+footer p.copyright {
+    margin: 15px 0 0;
+    text-align:center;
+    font-size:150%;
+    font-weight:300;
+}
+
+/* Media Queries */
 
 @media(max-width:767px) {
     .banner h2 {
         margin: 0;
-        /*text-shadow: 2px 2px 3px rgba(0,0,0,0.6);*/
         font-size: 3em;
     }
 
@@ -170,13 +168,29 @@ h6 {
     ul.banner-social-buttons > li:last-child {
         margin-bottom: 0;
     }
+    
 }
 
-footer {
-    padding: 50px 0;
-    background-color: #f8f8f8;
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        margin-top: 15px;
+    }
 }
 
-p.copyright {
-    margin: 15px 0 0;
+@media(max-width:480px) {
+    .intro-header{
+        min-height: 50%;
+    }
+    
+    .intro-header h1{
+        font-size:500%;
+        letter-spacing:15px;
+        font-weight:300;
+    }
+    
+    .intro-header h3 {
+        font-size:200%;
+        letter-spacing:5px;
+        font-weight:300;
+    }
 }
